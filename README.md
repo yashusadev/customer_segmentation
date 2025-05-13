@@ -28,11 +28,13 @@ Spending Score (1–100)
 
 # Project Workflow
 **1. Data Loading and Inspection**
+
 Loaded the CSV file and checked for null values.
 
 Displayed the structure and sample records to understand the dataset.
 
 **2. Exploratory Data Analysis (EDA)**
+
 Visualized relationships between variables using:
 
 Histograms and count plots (age, income, gender).
@@ -42,11 +44,13 @@ Scatter plots of income vs. spending score.
 Observed that younger customers with high spending scores stand out.
 
 **3. Feature Selection**
+
 Focused on just Annual Income and Spending Score for clustering.
 
 These two features are easier to visualize and provide good separation.
 
 **4. Choosing the Number of Clusters**
+
 Used the Elbow Method:
 
 Ran KMeans for different values of k (1 to 10).
@@ -56,6 +60,7 @@ Plotted the within-cluster sum of squares (WCSS).
 Found the “elbow” at k = 5, meaning 5 is an ideal number of clusters.
 
 **5. Applying KMeans Clustering**
+
 Created a KMeans model with 5 clusters.
 
 Fitted it to the data and obtained cluster labels.
@@ -63,22 +68,24 @@ Fitted it to the data and obtained cluster labels.
 Added the cluster labels back to the original dataset.
 
 **6. Visualizing the Clusters**
+
 Plotted a scatterplot with different colors for each cluster.
 
 This visually shows how customers are grouped by income and spending score.
 
 # Results & Insights
+
 The 5 customer segments (clusters) could roughly be interpreted as:
 
-**High income, low spending** – Potentially uninterested or premium customers.
+**1. High income, low spending** – Potentially uninterested or premium customers.
 
-**Low income, high spending** – Possibly impulsive or loyal buyers.
+**2. Low income, high spending** – Possibly impulsive or loyal buyers.
 
-**Moderate income, moderate spending** – Average customers.
+**3. Moderate income, moderate spending** – Average customers.
 
-**High income, high spending** – Target for premium marketing.
+**4. High income, high spending** – Target for premium marketing.
 
-**Low income, low spending** – Budget-conscious customers.
+**5. Low income, low spending** – Budget-conscious customers.
 
 **These insights can help a business tailor offers and communication strategies for each segment.**
 
